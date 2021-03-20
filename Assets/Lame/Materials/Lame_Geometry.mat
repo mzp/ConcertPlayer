@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lame_Geometry
+  m_Shader: {fileID: 4800000, guid: e583d334febcc4a489443668981bb57f, type: 3}
+  m_ShaderKeywords: _LAMESPACE_UV2D _NOLIGHTLAME_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _LameClipTex:
+        m_Texture: {fileID: 2800000, guid: 47aade09cc94e9346bf5792552fbbe11, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LameColorMap:
+        m_Texture: {fileID: 2800000, guid: 311423865c8456f418c9a6e7e623eede, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LameStrengthMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Animate: 0
+    - _AnimationSpeed: 3
+    - _ClipThreshold: 0.182
+    - _Cull: 0
+    - _IndependLameAlpha_NoLightIndependLameRGB: 0
+    - _LameAmount: 0.124
+    - _LameAttenuation: 0.5
+    - _LameClipTexDivide: 0.5
+    - _LameEmissive: 2
+    - _LameJitter: 1
+    - _LameMinimalStrength: 0.1
+    - _LameMinimumStrength: 0
+    - _LameNormalOffset: -0.01
+    - _LameNormalOffsetRandom: -0.2
+    - _LameParallaxDepth: 0
+    - _LameScale: 0.005
+    - _LameSize: 0.01
+    - _LameSpace: 0
+    - _LightDirSpace: 0
+    - _MinimalAlpha: 0.1
+    - _MinimalBrightness: 0.4
+    - _MinimalLightAtten: 0
+    - _MinimumAlpha: 0.2
+    - _MinimumDiffuse: 0
+    - _NoLightIndependLameRGB: 1
+    - _NoLightLame: 1
+    - _RandomColor: 0
+    - _RandomColorBlend: 1
+    - _RandomColorIntensity: 0.422
+    - _ReflectionBalance: 0
+    - _SpecPower: 0
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ClipTexDivide: {r: 2, g: 2, b: 0, a: 0}
+    - _FixedLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FixedLightDir: {r: 1, g: 1, b: 1, a: 0}
+    - _LameClipTexDivide: {r: 2, g: 2, b: 0, a: 0}
+    - _LameColor: {r: 1, g: 1, b: 1, a: 1}

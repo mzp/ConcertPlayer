@@ -5,9 +5,9 @@ using UnityEngine;
 public class PenLighController : MonoBehaviour
 {
     public GameObject target;
-    public MeshRenderer light;
+    public MeshRenderer penLight;
     public Material[] materials;
-    private int index = 0;
+    private int index = 1;
 
     void Start()
     {
@@ -21,15 +21,26 @@ public class PenLighController : MonoBehaviour
         this.transform.rotation = target.transform.rotation;
 
         // Color change
-        if (OVRInput.GetDown(OVRInput.Button.Two))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
             ChangeToNextColor();
+        }
+        else if(OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            ChangeToPrevColor();
         }
     }
 
     private void ChangeToNextColor() {
         Debug.Log("Change to next color : " + this.index);
-        this.light.material = this.materials[this.index];
+        this.penLight.material = this.materials[this.index];
         this.index = (this.index + 1) % this.materials.Length;
+    }
+
+    private void ChangeToPrevColor()
+    {
+        Debug.Log("Change to next color : " + this.index);
+        this.penLight.material = this.materials[this.index];
+        this.index = (this.index + this.materials.Length - 1) % this.materials.Length;
     }
 }

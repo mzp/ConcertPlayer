@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lame_Transparent1
+  m_Shader: {fileID: 4800000, guid: ac0494b0a4bd3844eab35f008446c3ad, type: 3}
+  m_ShaderKeywords: _ALPHABLEND_ON _ANIMATE_ON _INDEPENDLAMEALPHA_ON _INDEPENDLAMERGB_ON
+    _LAMESPACE_UV2D _NOLIGHTINDEPENDLAMERGB_ON _NOLIGHTLAME_ON _RANDOMCOLOR_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LameColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LameDirTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LameStrengthMap:
+        m_Texture: {fileID: 2800000, guid: 1407c536f1662434fb1b750b8269af09, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 02fae1a1579fd4141bd5d70d325392c6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Animate: 1
+    - _AnimationSpeed: 0.02
+    - _BumpScale: 1
+    - _Cull: 0
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 10
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _IndependLameAlpha: 1
+    - _IndependLameRGB: 1
+    - _IndipendLameAlpha: 0
+    - _IndipendLameRGB: 0
+    - _LameAmount: 0.005
+    - _LameAttenuation: 0
+    - _LameEmissive: 4
+    - _LameJitter: 1
+    - _LameMinimalStrength: 0
+    - _LameMinimumStrength: 0
+    - _LameParallaxDepth: 0
+    - _LameScale: 196
+    - _LameSpace: 0
+    - _LightAttenuationInfluence: 0.2
+    - _LightDirSpace: 0
+    - _Metallic: 0.435
+    - _MinimalBrightness: 0.4
+    - _MinimumDiffuse: 1
+    - _Mode: 2
+    - _NoLightIndependLameRGB: 1
+    - _NoLightLame: 1
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _RandomColor: 1
+    - _RandomColorBlend: 1
+    - _RandomColorIntensity: 1
+    - _ReflectionBalance: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpangleAmount: 4.3
+    - _SpangleAttenuation: 12.6
+    - _SpangleEmissive: 7.53
+    - _SpangleMinimumStrength: 0.011
+    - _SpangleParallaxDepth: 0.01
+    - _SpangleScale: 107
+    - _SpecPower: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 5
+    - _UVSec: 0
+    - _UseSpecular: 1
+    - _ZWrite: 0
+    m_Colors:
+    - _BaseColor: {r: 0.5377358, g: 0.086240664, b: 0.44743687, a: 0.70980394}
+    - _Color: {r: 1, g: 0.21099997, b: 0.676401, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FixedLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FixedLightDir: {r: 1, g: 1, b: 1, a: 0}
+    - _LameColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpangleColor: {r: 1, g: 0.9544128, b: 0, a: 1}
