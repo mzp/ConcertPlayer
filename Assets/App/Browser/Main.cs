@@ -227,8 +227,8 @@ public class Main : MonoBehaviour
 
     void Update() {
         if (needsUpdate) {
-            Reload();
             needsUpdate = false;
+            Reload();
         }
     }
 #endif

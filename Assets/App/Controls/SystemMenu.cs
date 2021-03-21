@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SystemMenu : MonoBehaviour
 {
-    public static bool active = false;
+    public static bool active = true;
     void Start()
     {
         

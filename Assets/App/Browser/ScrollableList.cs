@@ -54,7 +54,6 @@ public class ScrollableList : MonoBehaviour
             SpawnedItem.transform.SetParent(SpawnPoint, false);
             ItemDetail itemDetail = SpawnedItem.GetComponent<ItemDetail>();
             itemDetail.text.text = item.title;
-            Debug.Log(item.title);
 
             EventTrigger trigger = SpawnedItem.GetComponent<EventTrigger>();
             EventTrigger.Entry entry = new EventTrigger.Entry();
