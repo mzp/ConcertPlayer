@@ -4,17 +4,19 @@ using System.Linq;
 using UnityEngine.Video;
 using UnityEngine;
 
-
 enum BrowseItem {
     Device,
     Service,
     Item
 }
 
-public class Main : MonoBehaviour
+public class VideoFileBrowser : MonoBehaviour
 {    
     public GameObject target = null;
     public VideoPlayer videoPlayer = null;
+    public int sync_duration = 60;
+    private int frame = 0;
+
 #if UNITY_ANDROID
     AndroidJavaObject dlnaClient = null;
     BrowseItem state = BrowseItem.Device;
@@ -38,8 +40,8 @@ public class Main : MonoBehaviour
     List<ScrollableList.ListItem> items = new List<ScrollableList.ListItem>();
 
     class DeviceListener: AndroidJavaProxy {
-        Main parent = null;
-        public DeviceListener(Main parent): base("jp.mzp.needleplayer.dlnaclient.DeviceListener") {
+        VideoFileBrowser parent = null;
+        public DeviceListener(VideoFileBrowser parent): base("jp.mzp.needleplayer.dlnaclient.DeviceListener") {
             this.parent = parent;
         }
 
@@ -56,8 +58,8 @@ public class Main : MonoBehaviour
     }
 
     class BrowseCallback: AndroidJavaProxy {
-        Main parent = null;
-        public BrowseCallback(Main parent): base("jp.mzp.needleplayer.dlnaclient.BrowseCallback") {
+        VideoFileBrowser parent = null;
+        public BrowseCallback(VideoFileBrowser parent): base("jp.mzp.needleplayer.dlnaclient.BrowseCallback") {
             this.parent = parent;
         }
 
@@ -116,6 +118,7 @@ public class Main : MonoBehaviour
                     // item
                     string url = data.item.Call<AndroidJavaObject>("getFirstResource").Call<string>("getValue");
                     videoPlayer.url = url;
+                    videoPlayer.frame = PlayerPrefs.GetInt(videoPlayer.url, 0);
                 }
                 break;
         }
@@ -230,6 +233,11 @@ public class Main : MonoBehaviour
             needsUpdate = false;
             Reload();
         }
+
+        if (frame == 0 && videoPlayer.url != null && videoPlayer.isPlaying) {
+            PlayerPrefs.SetInt(videoPlayer.url, (int)videoPlayer.frame);
+        }
+        frame = (frame + 1) % sync_duration;
     }
 #endif
 }
