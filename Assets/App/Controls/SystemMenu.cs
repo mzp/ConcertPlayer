@@ -6,8 +6,8 @@ public class SystemMenu : MonoBehaviour
 {
     public static bool active = true;
     void Start()
-    {
-        
+    {    
+        ControllerSelection.OVRPointerVisualizer.active = active;
     }
 
     void Update()
