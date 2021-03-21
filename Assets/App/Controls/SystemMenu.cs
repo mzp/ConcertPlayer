@@ -15,6 +15,7 @@ public class SystemMenu : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.SecondaryThumbstick))
         {
             active = !active;
+            ControllerSelection.OVRPointerVisualizer.active = active;
         }
     }
 }

@@ -18,7 +18,7 @@ public class VideoPlayerPatch : MonoBehaviour
         AudioSettings.Reset(config);
     }
 
-    void Update() {
+    void Update() {        
         if (frame == 0) {
             player.frame = player.frame;
         }

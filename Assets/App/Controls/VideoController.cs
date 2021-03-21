@@ -12,11 +12,9 @@ public class VideoController : MonoBehaviour
 
     public void Toggle()
     {
-        if (player.isPlaying)
-        {
+        if (player.isPlaying) {
             player.Pause();
-        } else
-        {
+        } else {
             player.Play();
         }
     }
@@ -29,32 +27,12 @@ public class VideoController : MonoBehaviour
         }
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (player.isPlaying)
         {
             slider.value = (float)(player.frame / (player.frameCount * 1.0));
         }
-
-
-        if (SystemMenu.active)
-        {
-            if (OVRInput.GetDown(OVRInput.Button.One))
-            {
-                ui.SetActive(!ui.activeSelf);
-            }
-        }
-        else
-        {
-            ui.SetActive(false);
-        }
+        ui.SetActive(SystemMenu.active);
     }
  }

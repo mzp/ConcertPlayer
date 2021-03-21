@@ -14,23 +14,28 @@ public class Stage : MonoBehaviour
 
     public void OnDragBegin(BaseEventData data)
     {
+        if (SystemMenu.active) { return; }
+        ControllerSelection.OVRPointerVisualizer.active = true;
         isDragging = true;
         height = 0;
     }
 
     public void OnDragEnd(BaseEventData data)
     {
+        if (SystemMenu.active) { return; }
         isDragging = false; 
+        ControllerSelection.OVRPointerVisualizer.active = false;
     }
 
     public void OnDrag(BaseEventData data)
     {
+        if (SystemMenu.active) { return; }
         this.UpdatePosition(((ControllerSelection.OVRRayPointerEventData)data).pointerCurrentRaycast.worldPosition);
     }
     
     void Update()
     {
-        if (isDragging && SystemMenu.active)
+        if (isDragging)
         {
             Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
             distance = Mathf.Clamp(distance + primaryAxis.y / 2, 1, 20);
@@ -44,11 +49,8 @@ public class Stage : MonoBehaviour
 
     void UpdatePosition(Vector3 position)
     {
-        if (SystemMenu.active)
-        {
-            lastPosition = position;
-            target.position = Vector3.MoveTowards(origin.position, position, distance);
-            target.LookAt(new Vector3(0, (float)1.5 + (float)height, 0));
-        }
+        lastPosition = position;
+        target.position = Vector3.MoveTowards(origin.position, position, distance);
+        target.LookAt(new Vector3(0, (float)1.5 + (float)height, 0));
     }
 }

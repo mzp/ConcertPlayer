@@ -38,6 +38,9 @@ namespace ControllerSelection {
         public float gazeDrawDistance = 3;
 
         [HideInInspector]
+        static public bool active = false;
+
+        [HideInInspector]
         public OVRInput.Controller activeController = OVRInput.Controller.None;
 
         void Awake() {
@@ -93,7 +96,7 @@ namespace ControllerSelection {
         }
 
         void Update() {
-            activeController = SystemMenu.active ? OVRInputHelpers.GetControllerForButton(OVRInput.Button.PrimaryIndexTrigger, activeController) : OVRInput.Controller.None;
+            activeController = OVRPointerVisualizer.active ? OVRInputHelpers.GetControllerForButton(OVRInput.Button.PrimaryIndexTrigger, activeController) : OVRInput.Controller.None;
 
             Ray selectionRay = OVRInputHelpers.GetSelectionRay(activeController, trackingSpace);
             SetPointerVisibility();
